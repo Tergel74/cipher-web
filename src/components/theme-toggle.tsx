@@ -8,7 +8,7 @@ export default function ThemeToggle() {
     const [theme, setTheme] = useState<string>();
 
     useEffect(() => {
-        let storageTheme = localStorage.getItem("theme") || "light";
+        const storageTheme = localStorage.getItem("theme") || "light";
         console.log(storageTheme);
         document.documentElement.classList.toggle(
             "dark",
@@ -32,6 +32,9 @@ export default function ThemeToggle() {
                     setTheme(newTheme);
                     document.documentElement.classList.toggle("dark", toggled);
                 }}
+                placeholder={undefined}
+                onPointerEnterCapture={undefined}
+                onPointerLeaveCapture={undefined}
             />
         </div>
     );

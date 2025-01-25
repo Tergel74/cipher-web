@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import ThemeToggle from "@/components/theme-toggle";
 
 export default function Home() {
     const [text, setText] = useState("");
@@ -16,7 +15,7 @@ export default function Home() {
         }
 
         let msg = "";
-        for (let letter of input) {
+        for (const letter of input) {
             msg += String.fromCharCode(
                 letter.charCodeAt(0) +
                     (isEncryptMode ? currentKey : -currentKey)
@@ -44,7 +43,7 @@ export default function Home() {
         setIsEncryptMode((prevMode) => {
             // Process text with the new mode immediately
             let msg = "";
-            for (let letter of text) {
+            for (const letter of text) {
                 msg += String.fromCharCode(
                     letter.charCodeAt(0) + (!prevMode ? key : -key)
                 );
