@@ -29,7 +29,7 @@ Instructions on how to run the project.
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [https://cipherkey.vercel.app/](https://cipherkey.vercel.app/) with your browser to see the result.
 
 ## Features
 
